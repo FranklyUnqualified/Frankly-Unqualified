@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
-    color: #ffa500; /* Orange text */
+    color: black; /* Orange text */
     background-color: #000; /* Black background as a fallback */
     background-image: url('../img/page_background.png'); /* Path to your page background */
     background-size: cover; /* Cover the entire page */
@@ -131,6 +131,10 @@ footer {
     padding: 1rem; /* Adds padding inside the footer */
     background-color: #222; /* Darker shade for visual separation from main content */
     color: #fff; /* White text for contrast */
+    background-image: url('../img/footer_background.png'); /* Path to your footer background image */
+    background-size: cover /* Ensures the background image covers the footer area */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
 }
 
 /* Accessibility menu styling */
