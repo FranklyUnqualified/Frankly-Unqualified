@@ -1,122 +1,120 @@
-/* Resetting default margins and padding */
+/* Resets default margins, paddings, and sets box-sizing to border-box for consistent sizing */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Content box includes padding and border */
 }
 
-/* General body styling */
+/* Sets default font, background color, and text color for the body */
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #000; /* Black background */
-    color: #ffa500; /* Orange text */
+    font-family: 'Open Sans', sans-serif; /* Default font for readability */
+    background-color: #000; /* Sets a black background for contrast */
+    color: #ffa500; /* Orange text for visibility against the dark background */
 }
 
-/* Header styling */
+/* Styles for the header, using flexbox for layout */
 header {
     display: flex;
-    flex-wrap: wrap; /* Not sure if want */
-    justify-content: space-between; /* Ensures nav and logo are on opposite sides */
-    align-items: center;
-    padding: 1rem;
-    background-image: url('../img/header_background.png'); /* Path adjusted for your project structure */
-    background-size: cover; /* Ensures the background covers the header area */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    justify-content: space-between; /* Positions items on opposite ends */
+    align-items: center; /* Vertically centers items */
+    padding: 1rem; /* Adds space inside the header */
+    background-image: url('../img/header_background.png'); /* Background image for the header */
+    background-size: cover; /* Covers the entire header area */
+    background-repeat: no-repeat; /* No tiling of the image */
     background-position: center; /* Centers the background image */
-    width: 100%; /* Ensures the header spans the full width */
-    height: 100px; /* Example fixed height; adjust as needed */
+    width: 100%; /* Full width of its container */
+    height: auto; /* Adjusted to auto for flexible height based on content */
+    min-height: 100px; /* Ensures header is not too small */
 }
 
-/* Navigation link styling */
+/* Styles for the main navigation */
 #main-nav {
     display: flex;
-    align-items: center;
-    /* No changes needed here, just ensuring nav links are aligned properly */
+    align-items: center; /* Vertically centers navigation links */
 }
 
+/* Styles for navigation links */
 #main-nav a.nav-link {
-    color: #ffa500; /* Orange text color */
+    color: #ffa500; /* Orange text color for consistency */
     text-decoration: none; /* Removes underline from links */
-    margin-right: 10px;
-    margin-left: 30px;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold; /* Makes the text bold */
-    text-shadow: 2px 2px 4px #000000; /* Adds shadow to the text: horizontal, vertical, blur, color */
+    margin: 0 30px; /* Adds horizontal spacing between links, 0 vertical margin */
+    font-size: 1.875rem; /* Sets font size to 30px, using rem for scalability */
+    font-family: 'Montserrat', sans-serif; /* Montserrat font for distinctive look */
+    font-weight: bold; /* Bold text for emphasis */
+    text-shadow: 2px 2px 4px #000; /* Text shadow for depth */
 }
 
-/* Hamburger menu styling */
+/* Styles for the hamburger menu, hidden by default */
 #hamburger-menu {
-    display: none; /* Hidden by default */
-    cursor: pointer;
+    display: none; /* Hidden on larger screens, shown in media query */
+    cursor: pointer; /* Indicates clickable item */
 }
 
-/* Logo styling */
+/* Logo styling, positioned to the right */
 #logo img {
-    height: 80px; /* Adjust the size of the logo */
-    width: auto; /* Maintain the logo's aspect ratio */
-    margin-left: auto; /* Pushes the logo to the right */
-    margin-right: 30px; /* Adds some space between the logo and the border of the pane */
+    height: 5rem; /* Sets logo height, using rem for relative sizing */
+    width: auto; /* Keeps aspect ratio intact */
+    margin-left: auto; /* Pushes logo to the right */
+    margin-right: 2rem; /* Adds space to the right of the logo, using rem for consistency */
 }
 
-/* Main content styling */
+/* Main content padding */
 main {
-    padding: 20px;
+    padding: 1.25rem; /* Adds padding inside the main content area */
 }
 
-/* Page title styling */
+/* Styles for page and section titles */
 .page-title, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    margin: 20px 0;
+    font-family: 'Raleway', sans-serif; /* Raleway font for titles for a modern look */
+    text-align: center; /* Centers titles */
+    margin: 1.25rem 0; /* Top and bottom margin for spacing, 0 left and right */
 }
 
-/* Section title styling */
+/* Additional styling for section titles */
 .section-title {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem; /* Adds bottom margin for spacing between title and content */
 }
 
-/* Footer styling */
+/* Footer styling, using flexbox for layout */
 footer {
     display: flex;
-    align-items: center;
-    padding: 1rem;
-    background-color: #222; /* Darker shade for footer */
-    color: #fff;
+    align-items: center; /* Vertically centers footer content */
+    padding: 1rem; /* Adds padding inside the footer */
+    background-color: #222; /* Darker shade for visual separation from main content */
+    color: #fff; /* White text for contrast */
 }
 
 /* Accessibility menu styling */
 #accessibility-menu {
     display: flex;
-    align-items: center;
+    align-items: center; /* Vertically centers accessibility items */
 }
 
 #accessibility-btn {
     background: none;
-    border: 1px solid #ffa500;
-    color: #ffa500;
-    padding: 0px 3px;
-    cursor: pointer;
+    border: 1px solid #ffa500; /* Orange border for visibility */
+    color: #ffa500; /* Orange text for consistency */
+    padding: 0 0.1875rem; /* Small horizontal padding */
+    cursor: pointer; /* Indicates clickable item */
     display: flex;
-    align-items: center;
+    align-items: center; /* Vertically centers button content */
 }
 
 #accessibility-icon {
-    width: 40px; /* Adjust icon size as needed */
-    height: 40px; 
-    margin: -9px -9px -9px -13px;
-    cursor: pointer;
+    width: 2.5rem; /* Sets icon size, using rem for scalability */
+    height: 2.5rem; /* Maintains aspect ratio */
+    margin: -0.5625rem -0.8125rem; /* Adjusts icon position, using rem */
+    cursor: pointer; /* Indicates clickable item */
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design adjustments */
 @media (max-width: 768px) {
     #main-nav {
-        display: none; /* Hide navigation links on smaller screens */
+        display: none; /* Hides navigation links on smaller screens */
     }
 
     #hamburger-menu {
-        display: block; /* Show the hamburger menu */
+        display: block; /* Shows hamburger menu on smaller screens */
     }
 }
