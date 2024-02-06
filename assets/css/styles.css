@@ -43,7 +43,9 @@ header {
 
 /* Logo styling */
 #logo img {
-    height: 50px; /* Adjust as necessary */
+    height: 80px; /* Increase the size of the logo */
+    width: auto; /* Keep the logo's aspect ratio */
+    margin: 0 auto; /* Center the logo horizontally */
 }
 
 /* Main content styling */
