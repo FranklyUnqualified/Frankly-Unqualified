@@ -10,9 +10,9 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
-    color: black; /* Orange text */
+    color: #ffa500; 
     background-color: #000; /* Black background as a fallback */
-    background-image: url('../img/page_background.png'); /* Path to your page background */
+    /* background-image: url('../img/header_background.png'); Path to your page background */
     background-size: cover; /* Cover the entire page */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -27,7 +27,8 @@ header {
     justify-content: space-between; /* Positions items on opposite ends */
     align-items: center; /* Vertically centers items */
     padding: 0.5rem 1rem; /* Adds space inside the header */
-    background-image: url('../img/header_background.png'); /* Background image for the header */
+    /* background-image: url('../img/header_background.png'); Background image for the header */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     background-size: cover; /* Covers the entire header area */
     background-repeat: no-repeat; /* No tiling of the image */
     background-position: center; /* Centers the background image */
@@ -105,12 +106,21 @@ header {
 /* Main content padding */
 main {
     padding: 1.25rem; /* Adds padding inside the main content area */
+    flex: 1; /* Allows the main content to grow and push the footer to the bottom */
 }
 
 /* Make the content wrapper flex and grow to fill available space, pushing the footer down */
 .content-wrap {
+    display: flex;
     flex: 1;
+    flex-direction: column;
+    min-height: 100%;
+    background-image: url('../img/footer_background.png'); /* Path to your page background */
+    background-size: cover; /* Cover the entire content area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
 }
+
 
 /* Styles for page and section titles */
 .page-title, h1, h2, h3, h4, h5, h6 {
@@ -129,10 +139,10 @@ footer {
     display: flex;
     align-items: center; /* Vertically centers footer content */
     padding: 1rem; /* Adds padding inside the footer */
-    background-color: #222; /* Darker shade for visual separation from main content */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     color: #fff; /* White text for contrast */
-    background-image: url('../img/footer_background.png'); /* Path to your footer background image */
-    background-size: cover /* Ensures the background image covers the footer area */
+    /* background-image: url('../img/footer_background.png'); Path to your footer background image */
+    background-size: cover; /* Ensures the background image covers the footer area */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
 }
