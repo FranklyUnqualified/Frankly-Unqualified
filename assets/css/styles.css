@@ -49,6 +49,40 @@ header {
 #hamburger-menu {
     display: none; /* Hidden on larger screens, shown in media query */
     cursor: pointer; /* Indicates clickable item */
+    background: none;
+    border: none;
+}
+
+#hamburger-menu img {
+    height: 30px; /* Decrease the size as needed */
+    width: 30px; /* Maintain aspect ratio */
+    margin-left: 1rem;
+}
+
+.dropdown-content {
+    display: none; /* Hide dropdown content initially */
+    position: absolute;
+    background-color: #000; /* Light background for the dropdown */
+    min-width: 160px; /* Minimum width of the dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow for dropdown */
+    z-index: 1; /* Ensure dropdown is above other content */
+}
+
+.dropdown-content a {
+    color: #ffa500; /* Orange text color to match navigation pane headers */
+    padding: 0.3rem 1rem; /* Padding for each link */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Display links as block for full-width click area */
+    font-family: 'Montserrat', sans-serif; /* Montserrat font for consistency */
+    font-weight: bold; /* Bold text */
+    text-shadow: 2px 2px 4px #000; /* Text shadow for depth */
+}
+
+.dropdown-content a img {
+    margin-right: 5px; /* Space between icon and link text */
+    height: 20px; /* Decrease the size as needed */
+    width: 20px; /* Maintain aspect ratio */
+    vertical-align: middle; /* Aligns the icon vertically with the text */
 }
 
 /* Logo styling, positioned to the right */
@@ -104,7 +138,10 @@ footer {
 #accessibility-icon {
     width: 2.5rem; /* Sets icon size, using rem for scalability */
     height: 2.5rem; /* Maintains aspect ratio */
-    margin: -0.5625rem -0.8125rem; /* Adjusts icon position, using rem */
+    margin-left: -0.8rem; /* Adjusts icon position, using rem */
+    margin-right: -0.5rem;
+    margin-top: -0.6rem;
+    margin-bottom: -0.6rem;
     cursor: pointer; /* Indicates clickable item */
 }
 
