@@ -13,12 +13,18 @@ body {
 }
 
 /* Header styling */
+/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-image: url('path/to/nav_background.png');
+    background-image: url('../img/header_background.png'); /* Path adjusted for your project structure */
+    background-size: cover; /* Ensures the background covers the header area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
+    width: 100%; /* Ensures the header spans the full width */
+    height: 100px; /* Example fixed height; adjust as needed */
 }
 
 /* Navigation link styling */
