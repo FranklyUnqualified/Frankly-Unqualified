@@ -7,9 +7,17 @@
 
 /* Sets default font, background color, and text color for the body */
 body {
-    font-family: 'Open Sans', sans-serif; /* Default font for readability */
-    background-color: #000; /* Sets a black background for contrast */
-    color: #ffa500; /* Orange text for visibility against the dark background */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffa500; /* Orange text */
+    background-color: #000; /* Black background as a fallback */
+    background-image: url('assets/img/page_background.png'); /* Path to your page background */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    height: 100%;
+    min-height: 100vh; /* Ensure it covers at least the full viewport height */
 }
 
 /* Styles for the header, using flexbox for layout */
@@ -25,7 +33,7 @@ header {
     background-position: center; /* Centers the background image */
     width: 100%; /* Full width of its container */
     height: auto; /* Adjusted to auto for flexible height based on content */
-    max-height: 100px; /* Ensures header is not too small */
+    max-height: 6.2rem; /* Ensures header is not too small */
 }
 
 /* Styles for the main navigation */
@@ -38,11 +46,11 @@ header {
 #main-nav a.nav-link {
     color: #ffa500; /* Orange text color for consistency */
     text-decoration: none; /* Removes underline from links */
-    margin: 0 30px; /* Adds horizontal spacing between links, 0 vertical margin */
-    font-size: 1.875rem; /* Sets font size to 30px, using rem for scalability */
+    margin: 0rem 1.8rem; /* Adds horizontal spacing between links, 0 vertical margin */
+    font-size: 1.8rem; /* Sets font size to 30px, using rem for scalability */
     font-family: 'Montserrat', sans-serif; /* Montserrat font for distinctive look */
     font-weight: bold; /* Bold text for emphasis */
-    text-shadow: 2px 2px 4px #000; /* Text shadow for depth */
+    text-shadow: 0.2rem 0.2rem 0.3rem #000; /* Text shadow for depth */
 }
 
 /* Styles for the hamburger menu, hidden by default */
@@ -54,8 +62,8 @@ header {
 }
 
 #hamburger-menu img {
-    height: 30px; /* Decrease the size as needed */
-    width: 30px; /* Maintain aspect ratio */
+    height: 1.8rem; /* Decrease the size as needed */
+    width: 1.8rem; /* Maintain aspect ratio */
     margin-left: 1rem;
 }
 
@@ -63,8 +71,8 @@ header {
     display: none; /* Hide dropdown content initially */
     position: absolute;
     background-color: #000; /* Light background for the dropdown */
-    min-width: 160px; /* Minimum width of the dropdown */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow for dropdown */
+    min-width: 10rem; /* Minimum width of the dropdown */
+    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2); /* Shadow for dropdown */
     z-index: 1; /* Ensure dropdown is above other content */
 }
 
@@ -75,13 +83,13 @@ header {
     display: block; /* Display links as block for full-width click area */
     font-family: 'Montserrat', sans-serif; /* Montserrat font for consistency */
     font-weight: bold; /* Bold text */
-    text-shadow: 2px 2px 4px #000; /* Text shadow for depth */
+    text-shadow: 0.2rem 0.2rem 0.3rem #000; /* Text shadow for depth */
 }
 
 .dropdown-content a img {
-    margin-right: 5px; /* Space between icon and link text */
-    height: 20px; /* Decrease the size as needed */
-    width: 20px; /* Maintain aspect ratio */
+    margin-right: 0.5rem; /* Space between icon and link text */
+    height: 1.25rem; /* Decrease the size as needed */
+    width: 1.25rem; /* Maintain aspect ratio */
     vertical-align: middle; /* Aligns the icon vertically with the text */
 }
 
@@ -99,6 +107,11 @@ main {
     padding: 1.25rem; /* Adds padding inside the main content area */
 }
 
+/* Make the content wrapper flex and grow to fill available space, pushing the footer down */
+.content-wrap {
+    flex: 1;
+}
+
 /* Styles for page and section titles */
 .page-title, h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif; /* Raleway font for titles for a modern look */
@@ -108,7 +121,7 @@ main {
 
 /* Additional styling for section titles */
 .section-title {
-    margin-bottom: 0.625rem; /* Adds bottom margin for spacing between title and content */
+    margin-bottom: 0.6rem; /* Adds bottom margin for spacing between title and content */
 }
 
 /* Footer styling, using flexbox for layout */
@@ -128,9 +141,9 @@ footer {
 
 #accessibility-btn {
     background: none;
-    border: 1px solid #ffa500; /* Orange border for visibility */
+    border: 0.1rem solid #ffa500; /* Orange border for visibility */
     color: #ffa500; /* Orange text for consistency */
-    padding: 0 0.1875rem; /* Small horizontal padding */
+    padding: 0 0.2rem; /* Small horizontal padding */
     cursor: pointer; /* Indicates clickable item */
     display: flex;
     align-items: center; /* Vertically centers button content */
