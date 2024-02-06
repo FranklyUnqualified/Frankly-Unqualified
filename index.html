@@ -32,10 +32,10 @@
         </section>
         <!-- About section -->
         <section class="about">
-            <h2 class="section-title">ABOUT</h2>
-            <div class="contact-info">
-                <!-- Contact details -->
+            <h1 class="page-title">ABOUT</h1> <!-- Use h1 with class="page-title" for consistency -->
+            <div class="section-content"> <!-- Use a div to wrap the content, if necessary -->
                 <p>Contact us for more information.</p>
+                <!-- Additional content about the website -->
             </div>
             <div class="contact-form">
                 <!-- Placeholder for a contact form -->
@@ -45,9 +45,12 @@
     </main>
 
     <footer>
-        <button id="accessibility-btn" aria-label="Open accessibility menu">
-            Accessibility <span class="accessibility-icon"></span>
-        </button>
+        <div id="footer-content">
+            <!-- Accessibility menu button with icon before text -->
+            <button id="accessibility-btn" aria-label="Open accessibility menu">
+                <img src="assets/img/accessibility_icon.png" alt="Accessibility Icon" id="accessibility-icon"> Accessibility
+            </button>
+        </div>
     </footer>
 
     <script src="assets/js/main.js"></script>

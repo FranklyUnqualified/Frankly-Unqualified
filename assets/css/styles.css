@@ -58,18 +58,32 @@ main {
 
 /* Footer styling */
 footer {
+    display: flex;
+    align-items: center;
     padding: 1rem;
-    text-align: center;
     background-color: #222; /* Darker shade for footer */
     color: #fff;
 }
 
-/* Accessibility button styling */
+/* Accessibility menu styling */
+#accessibility-menu {
+    display: flex;
+    align-items: center;
+}
+
 #accessibility-btn {
     background: none;
     border: 1px solid #ffa500;
     color: #ffa500;
-    padding: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#accessibility-icon {
+    margin-right: 5px; /* Space between text and icon */
+    width: 30px; /* Adjust icon size as needed */
     cursor: pointer;
 }
 
@@ -80,4 +94,6 @@ footer {
     }
 
     #hamburger-menu {
-        display: block; /* Show the
+        display: block; /* Show the hamburger menu */
+    }
+}
