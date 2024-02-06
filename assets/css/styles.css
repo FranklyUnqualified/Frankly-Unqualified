@@ -18,14 +18,14 @@ header {
     flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
     justify-content: space-between; /* Positions items on opposite ends */
     align-items: center; /* Vertically centers items */
-    padding: 1rem; /* Adds space inside the header */
+    padding: 0.5rem 1rem; /* Adds space inside the header */
     background-image: url('../img/header_background.png'); /* Background image for the header */
     background-size: cover; /* Covers the entire header area */
     background-repeat: no-repeat; /* No tiling of the image */
     background-position: center; /* Centers the background image */
     width: 100%; /* Full width of its container */
     height: auto; /* Adjusted to auto for flexible height based on content */
-    min-height: 100px; /* Ensures header is not too small */
+    max-height: 100px; /* Ensures header is not too small */
 }
 
 /* Styles for the main navigation */
@@ -87,8 +87,9 @@ header {
 
 /* Logo styling, positioned to the right */
 #logo img {
-    height: 5rem; /* Sets logo height, using rem for relative sizing */
+    height: 6rem; /* Sets logo height, using rem for relative sizing */
     width: auto; /* Keeps aspect ratio intact */
+    margin-top: -0.5rem;
     margin-left: auto; /* Pushes logo to the right */
     margin-right: 2rem; /* Adds space to the right of the logo, using rem for consistency */
 }
