@@ -12,7 +12,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #ffa500; /* Orange text */
     background-color: #000; /* Black background as a fallback */
-    background-image: url('assets/img/page_background.png'); /* Path to your page background */
+    background-image: url('../img/page_background.png'); /* Path to your page background */
     background-size: cover; /* Cover the entire page */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the image */
