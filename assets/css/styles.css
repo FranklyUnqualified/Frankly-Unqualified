@@ -13,11 +13,10 @@ body {
 }
 
 /* Header styling */
-/* Header styling */
 header {
     display: flex;
     flex-wrap: wrap; /* Not sure if want */
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures nav and logo are on opposite sides */
     align-items: center;
     padding: 1rem;
     background-image: url('../img/header_background.png'); /* Path adjusted for your project structure */
@@ -29,10 +28,20 @@ header {
 }
 
 /* Navigation link styling */
+#main-nav {
+    display: flex;
+    align-items: center;
+    /* No changes needed here, just ensuring nav links are aligned properly */
+}
+
 #main-nav a.nav-link {
     color: #ffa500; /* Orange text color */
     text-decoration: none; /* Removes underline from links */
-    margin: 0 10px; /* Adjust spacing around the links as needed */
+    margin-right: 10px;
+    margin-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold; /* Makes the text bold */
     text-shadow: 2px 2px 4px #000000; /* Adds shadow to the text: horizontal, vertical, blur, color */
@@ -46,9 +55,10 @@ header {
 
 /* Logo styling */
 #logo img {
-    height: 80px; /* Increase the size of the logo */
-    width: auto; /* Keep the logo's aspect ratio */
-    margin: 0 auto; /* Center the logo horizontally */
+    height: 80px; /* Adjust the size of the logo */
+    width: auto; /* Maintain the logo's aspect ratio */
+    margin-left: auto; /* Pushes the logo to the right */
+    margin-right: 30px; /* Adds some space between the logo and the border of the pane */
 }
 
 /* Main content styling */
