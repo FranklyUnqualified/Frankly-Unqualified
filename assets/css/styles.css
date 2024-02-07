@@ -136,6 +136,9 @@ main {
 
 /* Footer styling, using flexbox for layout */
 footer {
+    justify-content: space-between; /* Space between items */
+    text-align: left; /* Text align left for the button */
+    width: 100%; /* Ensures the footer spans the full width of its container */
     display: flex;
     align-items: center; /* Vertically centers footer content */
     padding: 1rem; /* Adds padding inside the footer */
@@ -145,6 +148,33 @@ footer {
     background-size: cover; /* Ensures the background image covers the footer area */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+
+footer p {
+    color: #fff; /* Example text color, adjust as needed */
+    margin: 0; /* Removes default margin for a clean layout */
+    padding: 0.5rem 0; /* Adds vertical padding, adjust as needed */
+}
+
+#footer-content {
+    display: flex;
+    width: 100%;
+    justify-content: center; /* This will keep the button to the left */
+    align-items: center;
+}
+
+/* Invisible spacer */
+.spacer {
+    flex: 1;
+}
+
+#footer-content p {
+    flex: 2; /* Allows the paragraph to take up more space, ensuring centering */
+    font-size: 0.75rem;
+    flex-grow: 1; /* Allows the paragraph to take up available space */
+    text-align: center; /* Centers the text within the paragraph element */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Add padding on both sides to ensure it doesn't touch the button or edge */
 }
 
 /* Accessibility menu styling */
