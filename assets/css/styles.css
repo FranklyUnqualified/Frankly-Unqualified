@@ -100,7 +100,7 @@ header {
 }
 
 .dropdown-content {
-    display: none; /* Hide dropdown content initially */
+    display: block; /* Hide dropdown content initially */
     position: absolute;
     top: 5%; /* Aligns with the top of the hamburger menu */
     left: 10%; /* Positions the dropdown to the right of the hamburger menu */

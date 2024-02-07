@@ -2,38 +2,39 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const dropdown = document.getElementById('dropdown-menu');
 
-    // Function to toggle the dropdown display and add animation
+    // Toggles the display of the dropdown menu and adds animation to the hamburger icon
     function toggleDropdown() {
-        // Check if the dropdown is currently shown
-        const isShown = dropdown.classList.contains('show');
-
-        // Toggle the show class to either display or hide the dropdown
-        dropdown.classList.toggle('show', !isShown);
+        // Toggle the visibility of the dropdown menu
+        dropdown.classList.toggle('show');
 
         // Add spin animation to the hamburger icon
         hamburgerMenu.classList.add('spin-animation');
 
-        // Remove the spin animation class after it completes
+        // Remove the spin animation class after it completes to reset the animation
         setTimeout(() => {
             hamburgerMenu.classList.remove('spin-animation');
-        }, 600); // This duration should match the CSS animation duration
+        }, 600); // Ensure this matches the CSS animation duration
     }
 
-    // Event listener for clicking the hamburger menu
+    // Adds an event listener for clicks on the hamburger menu to toggle the dropdown
     hamburgerMenu.addEventListener('click', function(event) {
         toggleDropdown();
-        event.stopPropagation(); // Prevent click from immediately propagating to document
+        // Prevents the click from propagating to the document, which could trigger a close event
+        event.stopPropagation();
     });
 
-    // Event listener for clicking outside the dropdown to close it
+    // Adds an event listener to the document to close the dropdown when clicking outside
     document.addEventListener('click', function(event) {
+        // Checks if the click is outside the dropdown and the hamburger menu
         if (!dropdown.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+            // Hides the dropdown menu if it's currently shown
             dropdown.classList.remove('show');
         }
     });
 
-    // Prevent dropdown menu from closing when clicking inside it
+    // Prevents the dropdown menu from closing when clicking inside of it
     dropdown.addEventListener('click', function(event) {
+        // Stops the click inside the dropdown from propagating to the document
         event.stopPropagation();
     });
 });
