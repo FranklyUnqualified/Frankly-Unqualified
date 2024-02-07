@@ -69,6 +69,7 @@ header {
     cursor: pointer; /* Indicates clickable item */
     background: none;
     border: none;
+    position: relative; /* This makes the dropdown positioning relative to this container */
 }
 
 #hamburger-menu img {
@@ -83,13 +84,43 @@ header {
     transition: transform 0.3s ease; /* Smooth transition */
 }
 
+/* Spin animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Class to add for spinning effect */
+.spin-animation {
+    animation: spin 0.6s ease;
+}
+
 .dropdown-content {
     display: none; /* Hide dropdown content initially */
     position: absolute;
-    background-color: #000; /* Light background for the dropdown */
+    top: 5%; /* Aligns with the top of the hamburger menu */
+    left: 10%; /* Positions the dropdown to the right of the hamburger menu */
+    opacity: 0;
+    transform: translateX(0) translateY(-10px); /* Start slightly above the final position */
+    visibility: hidden; /* Use visibility to hide the dropdown */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Add visibility to the transition */
+    background-color: #000; /* Background color */
     min-width: 10rem; /* Minimum width of the dropdown */
     box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2); /* Shadow for dropdown */
     z-index: 1; /* Ensure dropdown is above other content */
+}
+
+/* Class to control the visibility and animation */
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+    transform: translateX(0) translateY(0); /* Move to final position */
+    visibility: visible; /* Make dropdown visible */
+    transition-delay: 0s; /* Ensure visibility transitions immediately */
 }
 
 .dropdown-content a {
