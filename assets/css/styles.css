@@ -54,6 +54,11 @@ header {
     font-family: 'Montserrat', sans-serif; /* Montserrat font for distinctive look */
     font-weight: bold; /* Bold text for emphasis */
     text-shadow: 0.2rem 0.2rem 0.3rem #000; /* Text shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+#main-nav a.nav-link:hover {
+    transform: scale(1.05); /* Slightly scales up the link by 5% on hover */
 }
 
 /* Styling for the icons within navigation links */
@@ -145,6 +150,11 @@ header {
     font-family: 'Montserrat', sans-serif; /* Montserrat font for consistency */
     font-weight: bold; /* Bold text */
     text-shadow: 0.2rem 0.2rem 0.3rem #000; /* Text shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+.dropdown-content a:hover {
+    transform: scale(1.05); /* Slightly scales up the link by 5% on hover */
 }
 
 .dropdown-content a img {
@@ -161,6 +171,11 @@ header {
     margin-top: -0.5rem;
     margin-left: auto; /* Pushes logo to the right */
     margin-right: 2rem; /* Adds space to the right of the logo, using rem for consistency */
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+#logo img:hover {
+    transform: scale(1.1); /* Scales up the logo by 10% on hover */
 }
 
 /* Main content padding */
@@ -255,6 +270,11 @@ footer p {
     cursor: pointer; /* Indicates clickable item */
     display: flex;
     align-items: center; /* Vertically centers button content */
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+#accessibility-btn:hover {
+    transform: scale(1.1); /* Scales up the button by 10% on hover */
 }
 
 #accessibility-icon {
