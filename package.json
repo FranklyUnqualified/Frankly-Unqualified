@@ -1,0 +1,10 @@
+{
+  "name": "frankly-unqualified",
+  "version": "1.0.0",
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  },
+  "scripts": {
+    "release": "standard-version"
+  }
+}
