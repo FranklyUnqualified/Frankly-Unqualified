@@ -45,6 +45,8 @@ header {
 
 /* Styles for navigation links */
 #main-nav a.nav-link {
+    display: flex;
+    align-items: center; /* Aligns the icon and text vertically */
     color: #ffa500; /* Orange text color for consistency */
     text-decoration: none; /* Removes underline from links */
     margin: 0rem 1.8rem; /* Adds horizontal spacing between links, 0 vertical margin */
@@ -52,6 +54,13 @@ header {
     font-family: 'Montserrat', sans-serif; /* Montserrat font for distinctive look */
     font-weight: bold; /* Bold text for emphasis */
     text-shadow: 0.2rem 0.2rem 0.3rem #000; /* Text shadow for depth */
+}
+
+/* Styling for the icons within navigation links */
+.nav-icon {
+    height: 5rem; /* Adjust size as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 0.5rem; /* Adds some space between the icon and the text */
 }
 
 /* Styles for the hamburger menu, hidden by default */
@@ -115,7 +124,7 @@ main {
     flex: 1;
     flex-direction: column;
     min-height: 100%;
-    background-image: url('../img/footer_background.png'); /* Path to your page background */
+    background-image: url('../img/background.png'); /* Path to your page background */
     background-size: cover; /* Cover the entire content area */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the image */
