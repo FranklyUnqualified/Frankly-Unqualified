@@ -77,6 +77,12 @@ header {
     margin-left: 1rem;
 }
 
+/* Hamburger menu icon hover effect */
+#hamburger-menu img:hover {
+    transform: scale(1.1); /* Grows the icon by 10% */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
 .dropdown-content {
     display: none; /* Hide dropdown content initially */
     position: absolute;
