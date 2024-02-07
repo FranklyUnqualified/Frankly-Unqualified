@@ -139,7 +139,8 @@ footer {
     justify-content: space-between; /* Space between items */
     text-align: left; /* Text align left for the button */
     width: 100%; /* Ensures the footer spans the full width of its container */
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center; /* Vertically centers footer content */
     padding: 1rem; /* Adds padding inside the footer */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
@@ -157,19 +158,15 @@ footer p {
 }
 
 #footer-content {
-    display: flex;
+    display: contents; /* Make #footer-content not affect the grid */
     width: 100%;
     justify-content: center; /* This will keep the button to the left */
     align-items: center;
 }
 
-/* Invisible spacer */
-.spacer {
-    flex: 1;
-}
-
 #footer-content p {
-    flex: 2; /* Allows the paragraph to take up more space, ensuring centering */
+    grid-column: 2 / 3; /* Center the paragraph */
+    flex: 2;
     font-size: 0.75rem;
     flex-grow: 1; /* Allows the paragraph to take up available space */
     text-align: center; /* Centers the text within the paragraph element */
@@ -184,10 +181,17 @@ footer p {
 }
 
 #accessibility-btn {
+    grid-column: 1 / 2;
+    width: auto;
     background: none;
+    justify-self: start; /* Align the button to the left of its grid area */
     border: 0.1rem solid #ffa500; /* Orange border for visibility */
     color: #ffa500; /* Orange text for consistency */
-    padding: 0 0.2rem; /* Small horizontal padding */
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem; /* Small horizontal padding */
+    border: 2px solid #ffa500;
+    background-color: transparent;
+    text-align: center;
     cursor: pointer; /* Indicates clickable item */
     display: flex;
     align-items: center; /* Vertically centers button content */
