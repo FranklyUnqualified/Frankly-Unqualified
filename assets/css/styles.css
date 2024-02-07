@@ -100,7 +100,7 @@ header {
 }
 
 .dropdown-content {
-    display: block; /* Hide dropdown content initially */
+    display: block; /* Always block but invisible when not shown */
     position: absolute;
     top: 5%; /* Aligns with the top of the hamburger menu */
     left: 10%; /* Positions the dropdown to the right of the hamburger menu */
@@ -108,7 +108,7 @@ header {
     transform: translateX(0) translateY(-10px); /* Start slightly above the final position */
     visibility: hidden; /* Use visibility to hide the dropdown */
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Add visibility to the transition */
-    background-color: #000; /* Background color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     min-width: 10rem; /* Minimum width of the dropdown */
     box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2); /* Shadow for dropdown */
     z-index: 1; /* Ensure dropdown is above other content */
