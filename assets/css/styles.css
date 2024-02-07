@@ -84,25 +84,39 @@ header {
     transition: transform 0.3s ease; /* Smooth transition */
 }
 
-/* Spin animation */
-@keyframes spin {
+/* Spin to sideways (90 degrees) */
+@keyframes spin-to-side {
     from {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(90deg);
     }
 }
 
-/* Class to add for spinning effect */
-.spin-animation {
-    animation: spin 0.6s ease;
+/* Spin back to original position */
+@keyframes spin-back {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* Apply animation when class is added */
+.spin-to-side {
+    animation: spin-to-side 0.6s forwards;
+}
+
+.spin-back {
+    animation: spin-back 0.6s forwards;
 }
 
 .dropdown-content {
     display: block; /* Always block but invisible when not shown */
     position: absolute;
-    top: 5%; /* Aligns with the top of the hamburger menu */
+    top: 6%; /* Aligns with the top of the hamburger menu */
     left: 10%; /* Positions the dropdown to the right of the hamburger menu */
     opacity: 0;
     transform: translateX(0) translateY(-10px); /* Start slightly above the final position */
