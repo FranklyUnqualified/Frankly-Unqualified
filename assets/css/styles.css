@@ -1,80 +1,81 @@
-/* Resets default margins, paddings, and sets box-sizing to border-box for consistent sizing */
+/* Global Resets */
+/* Resets margins, paddings, and sets box-sizing for consistent element sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Content box includes padding and border */
 }
 
-/* Sets default font, background color, and text color for the body */
+/* Body Styling */
+/* Sets up the base font, background color, and layout properties for the entire page */
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
-    color: #ffa500; 
-    background-color: #000; /* Black background as a fallback */
-    /* background-image: url('../img/header_background.png'); Path to your page background */
-    background-size: cover; /* Cover the entire page */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    height: 100%;
-    min-height: 100vh; /* Ensure it covers at least the full viewport height */
+    display: flex; /* Establishes a flex container for layout flexibility */
+    flex-direction: column; /* Stacks child elements vertically */
+    font-family: 'Open Sans', sans-serif; /* Primary font for the website */
+    color: #ffa500; /* Default text color */
+    background-color: #000; /* Fallback background color */
+    background-size: cover; /* Ensures background covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    min-height: 100vh; /* Minimum height to cover the full viewport height */
 }
 
-/* Styles for the header, using flexbox for layout */
+/* Header Styling */
+/* Configures the layout and appearance of the page header */
 header {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
-    justify-content: space-between; /* Positions items on opposite ends */
-    align-items: center; /* Vertically centers items */
-    padding: 0.5rem 1rem; /* Adds space inside the header */
-    /* background-image: url('../img/header_background.png'); Background image for the header */
+    flex-wrap: wrap; /* Allows header items to wrap on smaller screens */
+    justify-content: space-between; /* Spreads items to fill the available space */
+    align-items: center; /* Centers items vertically within the header */
+    padding: 0.5rem 1rem; /* Adds padding inside the header */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     background-size: cover; /* Covers the entire header area */
     background-repeat: no-repeat; /* No tiling of the image */
     background-position: center; /* Centers the background image */
-    width: 100%; /* Full width of its container */
-    height: auto; /* Adjusted to auto for flexible height based on content */
-    max-height: 6.2rem; /* Ensures header is not too small */
+    width: 100%; /* Ensures the header spans the full width of the viewport */
+    height: auto; /* Auto-adjusts height based on content */
+    max-height: 6.2rem; /* Limits maximum height */
 }
 
-/* Styles for the main navigation */
+/* Main Navigation Styling */
+/* Styles the main navigation bar and its links */
 #main-nav {
     display: flex;
-    align-items: center; /* Vertically centers navigation links */
+    align-items: center; /* Ensures links are vertically centered */
 }
 
-/* Styles for navigation links */
+
 #main-nav a.nav-link {
     display: flex;
-    align-items: center; /* Aligns the icon and text vertically */
-    color: #ffa500; /* Orange text color for consistency */
+    align-items: center; /* Aligns icons and text within links */
+    color: #ffa500;
     text-decoration: none; /* Removes underline from links */
-    margin: 0rem 1.8rem; /* Adds horizontal spacing between links, 0 vertical margin */
+    margin: 0 1.8rem; /* Horizontal spacing between links */
     font-size: 1.8rem; /* Sets font size to 30px, using rem for scalability */
     font-family: 'Montserrat', sans-serif; /* Montserrat font for distinctive look */
     font-weight: bold; /* Bold text for emphasis */
-    text-shadow: 0.2rem 0.2rem 0.3rem #000; /* Text shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+    text-shadow: 0.2rem 0.2rem 0.3rem #000; /* Adds depth to text */
+    transition: transform 0.3s ease; /* Smooth scaling transition on hover */
 }
 
 #main-nav a.nav-link:hover {
-    transform: scale(1.05); /* Slightly scales up the link by 5% on hover */
+    transform: scale(1.05); /* Enlarges link slightly on hover */
 }
 
-/* Styling for the icons within navigation links */
+/* Icon Styling within Navigation Links */
 .nav-icon {
-    height: 5rem; /* Adjust size as needed */
-    width: auto; /* Maintain aspect ratio */
-    margin-right: 0.5rem; /* Adds some space between the icon and the text */
+    height: 5rem; /* Icon size */
+    width: auto; /* Maintains aspect ratio */
+    margin-right: 0.5rem; /* Space between icon and text */
 }
 
-/* Styles for the hamburger menu, hidden by default */
+/* Hamburger Menu Styling */
 #hamburger-menu {
-    display: none; /* Hidden on larger screens, shown in media query */
+    display: none; /* Initially hidden on larger screens */
     cursor: pointer; /* Indicates clickable item */
     background: none;
     border: none;
-    position: relative; /* This makes the dropdown positioning relative to this container */
+    position: relative; /* Establishes positioning context for dropdown */
 }
 
 #hamburger-menu img {
@@ -83,49 +84,39 @@ header {
     margin-left: 1rem;
 }
 
-/* Hamburger menu icon hover effect */
 #hamburger-menu img:hover {
-    transform: scale(1.1); /* Grows the icon by 10% */
-    transition: transform 0.3s ease; /* Smooth transition */
+    transform: scale(1.1); /* Enlarges hamburger icon on hover */
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
 }
 
-/* Spin to sideways (90 degrees) */
+/* Animation for Hamburger Menu */
 @keyframes spin-to-side {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(90deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(90deg); }
 }
 
-/* Spin back to original position */
 @keyframes spin-back {
-    from {
-        transform: rotate(90deg);
-    }
-    to {
-        transform: rotate(0deg);
-    }
+    from { transform: rotate(90deg); }
+    to { transform: rotate(0deg); }
 }
 
-/* Apply animation when class is added */
 .spin-to-side {
-    animation: spin-to-side 0.6s forwards;
+    animation: spin-to-side 0.6s forwards; /* Rotates to 90 degrees and stays */
 }
 
 .spin-back {
-    animation: spin-back 0.6s forwards;
+    animation: spin-back 0.6s forwards; /* Rotates back to 0 degrees */
 }
 
+/* Dropdown Menu Styling */
 .dropdown-content {
-    display: block; /* Always block but invisible when not shown */
+    display: block; /* Always 'block' to enable transitions */
     position: absolute;
     top: 6%; /* Aligns with the top of the hamburger menu */
     left: 10%; /* Positions the dropdown to the right of the hamburger menu */
-    opacity: 0;
+    opacity: 0; /* Initially invisible */
     transform: translateX(0) translateY(-10px); /* Start slightly above the final position */
-    visibility: hidden; /* Use visibility to hide the dropdown */
+    visibility: hidden; /* Hidden until shown */
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Add visibility to the transition */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     min-width: 10rem; /* Minimum width of the dropdown */
@@ -136,9 +127,9 @@ header {
 /* Class to control the visibility and animation */
 .dropdown-content.show {
     display: block;
-    opacity: 1;
-    transform: translateX(0) translateY(0); /* Move to final position */
-    visibility: visible; /* Make dropdown visible */
+    opacity: 1; /* Makes content visible */
+    transform: translateX(0) translateY(0); /* Moves to final position */
+    visibility: visible; /* Becomes fully visible */
     transition-delay: 0s; /* Ensure visibility transitions immediately */
 }
 
@@ -154,7 +145,7 @@ header {
 }
 
 .dropdown-content a:hover {
-    transform: scale(1.05); /* Slightly scales up the link by 5% on hover */
+    transform: scale(1.05); /* Slight enlargement effect on hover */
 }
 
 .dropdown-content a img {
@@ -164,7 +155,7 @@ header {
     vertical-align: middle; /* Aligns the icon vertically with the text */
 }
 
-/* Logo styling, positioned to the right */
+/* Website Logo Styling */
 #logo img {
     height: 6rem; /* Sets logo height, using rem for relative sizing */
     width: auto; /* Keeps aspect ratio intact */
@@ -175,16 +166,16 @@ header {
 }
 
 #logo img:hover {
-    transform: scale(1.1); /* Scales up the logo by 10% on hover */
+    transform: scale(1.1); /* Logo enlarges on hover */
 }
 
-/* Main content padding */
+/* Main Content Styling */
 main {
     padding: 1.25rem; /* Adds padding inside the main content area */
-    flex: 1; /* Allows the main content to grow and push the footer to the bottom */
+    flex: 1; /* Allows content to expand and fill available space */
 }
 
-/* Make the content wrapper flex and grow to fill available space, pushing the footer down */
+/* Content Wrapper Styling */
 .content-wrap {
     display: flex;
     flex: 1;
@@ -196,20 +187,19 @@ main {
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 
-
-/* Styles for page and section titles */
+/* Page and Section Title Styling */
 .page-title, h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif; /* Raleway font for titles for a modern look */
     text-align: center; /* Centers titles */
     margin: 1.25rem 0; /* Top and bottom margin for spacing, 0 left and right */
 }
 
-/* Additional styling for section titles */
+/* Section Title Styling */
 .section-title {
     margin-bottom: 0.6rem; /* Adds bottom margin for spacing between title and content */
 }
 
-/* Footer styling, using flexbox for layout */
+/* Footer Styling */
 footer {
     justify-content: space-between; /* Space between items */
     text-align: left; /* Text align left for the button */
@@ -224,12 +214,6 @@ footer {
     background-size: cover; /* Ensures the background image covers the footer area */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
-}
-
-footer p {
-    color: #fff; /* Example text color, adjust as needed */
-    margin: 0; /* Removes default margin for a clean layout */
-    padding: 0.5rem 0; /* Adds vertical padding, adjust as needed */
 }
 
 #footer-content {
