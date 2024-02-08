@@ -1,3 +1,5 @@
+/* ===ALL PAGES=== */
+
 /* Global Resets */
 /* Resets margins, paddings, and sets box-sizing for consistent element sizing */
 * {
@@ -191,7 +193,8 @@ main {
 .page-title, h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif; /* Raleway font for titles for a modern look */
     text-align: center; /* Centers titles */
-    margin: 1.25rem 0; /* Top and bottom margin for spacing, 0 left and right */
+    margin-top: 2rem; /* Spacing around titles */
+    margin-bottom: 2rem;
 }
 
 /* Section Title Styling */
@@ -272,12 +275,66 @@ footer {
 }
 
 /* Responsive design adjustments */
-@media (max-width: 768px) {
+@media (max-width: 973px) {
     #main-nav {
         display: none; /* Hides navigation links on smaller screens */
     }
 
     #hamburger-menu {
         display: block; /* Shows hamburger menu on smaller screens */
+    }
+}
+
+/* ===HOME PAGE=== */
+/* About section */
+
+/* Container for the contact section */
+.contact-section {
+    display: flex;
+    justify-content: flex-end; /* Aligns the form to the right */
+    padding: 20px; /* Adds some padding around the section for spacing */
+    min-height: 400px; /* Adjust height as needed */
+}
+
+/* Styles for the form */
+#contact-form {
+    max-width: 400px; /* Sets a max width for the form */
+    width: 100%; /* Ensures form does not exceed the max width */
+    padding: 20px; /* Adds padding inside the form for spacing */
+    border: 1px solid #ffa500; /* Optional: adds a border around the form */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+}
+
+/* Styles for form elements */
+#contact-form label {
+    display: block; /* Makes each label display on its own line */
+    margin-bottom: 5px; /* Adds space below each label */
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%; /* Makes input fields take up the full form width */
+    padding: 8px; /* Adds padding inside input fields for better text visibility */
+    margin-bottom: 20px; /* Adds space below each input field */
+    border-radius: 5px; /* Optional: rounds the corners of the input fields */
+}
+
+#contact-form button {
+    background-color: #ffa500; /* Sets the button color */
+    color: black; /* Sets the text color inside the button */
+    font-weight: bold;
+    padding: 10px 20px; /* Adds padding inside the button for sizing */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    border-radius: 5px; /* Rounds the corners of the button */
+}
+
+/* Responsive design */
+@media (max-width: 973px) {
+    .contact-section {
+        flex-direction: column; /* Stacks the form vertically on smaller screens */
+        justify-content: center; /* Centers the form vertically */
+        align-items: center; /* Centers the form horizontally */
     }
 }

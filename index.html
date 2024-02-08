@@ -45,22 +45,29 @@
         </header>
 
         <main>
-            <h1 class="page-title">HOME</h1>
-            <!-- Section for the website introduction -->
-            <section class="intro">
+            <!-- About section -->
+            <h1 class="page-title">ABOUT</h1>
+            <section class="about">
                 <p>Welcome to the website! Here you can find information about my projects and tools.</p>
             </section>
-            <!-- About section -->
-            <section class="about">
-                <h1 class="page-title">ABOUT</h1> <!-- Use h1 with class="page-title" for consistency -->
-                <div class="section-content"> <!-- Use a div to wrap the content, if necessary -->
-                    <p>Contact us for more information.</p>
-                    <!-- Additional content about the website -->
-                </div>
-                <div class="contact-form">
-                    <!-- Placeholder for a contact form -->
-                    <p>Contact form will be here.</p>
-                </div>
+            <!-- Contact section -->
+            <h1 class="page-title">CONTACT</h1>
+            <section class="contact">
+                <p>Want to get in touch?</p>
+            </section>
+            <section class="contact-section">
+                <form id="contact-form" action="/submit-form-endpoint" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">SEND</button>
+                </form>
             </section>
         </main>
         <footer>
