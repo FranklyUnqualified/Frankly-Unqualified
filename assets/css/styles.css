@@ -195,6 +195,7 @@ main {
     text-align: center; /* Centers titles */
     margin-top: 2rem; /* Spacing around titles */
     margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 
 /* Section Title Styling */
@@ -367,4 +368,25 @@ footer {
         justify-content: center; /* Centers the form vertically */
         align-items: center; /* Centers the form horizontally */
     }
+}
+
+/* ===TOOLS PAGE=== */
+.tools-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.tool {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem; /* Space between each tool */
+}
+
+.tool-info {
+    flex: 1;
+}
+
+.tool-image img {
+    width: 12.5rem; /* Adjust as needed */
+    height: auto;
 }
