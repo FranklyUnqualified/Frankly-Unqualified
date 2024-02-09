@@ -8,13 +8,13 @@
     box-sizing: border-box; /* Content box includes padding and border */
 }
 
-/* Body Styling */
+/* Styles - Body */
 /* Sets up the base font, background color, and layout properties for the entire page */
 body {
     display: flex; /* Establishes a flex container for layout flexibility */
     flex-direction: column; /* Stacks child elements vertically */
     font-family: 'Open Sans', sans-serif; /* Primary font for the website */
-    color: #ffa500; /* Default text color */
+    color: #ff8800; /* Default text color */
     background-color: #000; /* Fallback background color */
     background-size: cover; /* Ensures background covers the entire viewport */
     background-position: center; /* Centers the background image */
@@ -22,8 +22,7 @@ body {
     min-height: 100vh; /* Minimum height to cover the full viewport height */
 }
 
-/* Header Styling */
-/* Configures the layout and appearance of the page header */
+/* Styles - Header */
 header {
     display: flex;
     flex-wrap: wrap; /* Allows header items to wrap on smaller screens */
@@ -39,18 +38,16 @@ header {
     max-height: 6.2rem; /* Limits maximum height */
 }
 
-/* Main Navigation Styling */
-/* Styles the main navigation bar and its links */
+/* Styles - Main Navigation */
 #main-nav {
     display: flex;
     align-items: center; /* Ensures links are vertically centered */
 }
 
-
 #main-nav a.nav-link {
     display: flex;
     align-items: center; /* Aligns icons and text within links */
-    color: #ffa500;
+    color: #ff8800;
     text-decoration: none; /* Removes underline from links */
     margin: 0 1.8rem; /* Horizontal spacing between links */
     font-size: 1.8rem; /* Sets font size to 30px, using rem for scalability */
@@ -64,14 +61,25 @@ header {
     transform: scale(1.05); /* Enlarges link slightly on hover */
 }
 
-/* Icon Styling within Navigation Links */
+/* Styles - Navigation Icons */
 .nav-icon {
     height: 5rem; /* Icon size */
     width: auto; /* Maintains aspect ratio */
     margin-right: 0.5rem; /* Space between icon and text */
 }
 
-/* Hamburger Menu Styling */
+/* Responsive Design - Navigation Menu */
+@media (max-width: 973px) {
+    #main-nav {
+        display: none; /* Hides navigation links on smaller screens */
+    }
+
+    #hamburger-menu {
+        display: block; /* Shows hamburger menu on smaller screens */
+    }
+}
+
+/* Styles - Hamburger Menu */
 #hamburger-menu {
     display: none; /* Initially hidden on larger screens */
     cursor: pointer; /* Indicates clickable item */
@@ -110,7 +118,7 @@ header {
     animation: spin-back 0.6s forwards; /* Rotates back to 0 degrees */
 }
 
-/* Dropdown Menu Styling */
+/* Styles - Dropdown Menu */
 .dropdown-content {
     display: block; /* Always 'block' to enable transitions */
     position: absolute;
@@ -136,7 +144,7 @@ header {
 }
 
 .dropdown-content a {
-    color: #ffa500; /* Orange text color to match navigation pane headers */
+    color: #ff8800; /* Orange text color to match navigation pane headers */
     padding: 0.3rem 1rem; /* Padding for each link */
     text-decoration: none; /* Remove underline from links */
     display: block; /* Display links as block for full-width click area */
@@ -157,7 +165,7 @@ header {
     vertical-align: middle; /* Aligns the icon vertically with the text */
 }
 
-/* Website Logo Styling */
+/* Styles - Website Logo */
 #logo img {
     height: 6rem; /* Sets logo height, using rem for relative sizing */
     width: auto; /* Keeps aspect ratio intact */
@@ -171,13 +179,13 @@ header {
     transform: scale(1.1); /* Logo enlarges on hover */
 }
 
-/* Main Content Styling */
+/* Styles - Main Content */
 main {
     padding: 1.25rem; /* Adds padding inside the main content area */
     flex: 1; /* Allows content to expand and fill available space */
 }
 
-/* Content Wrapper Styling */
+/* Styles - Content Wrapper */
 .content-wrap {
     display: flex;
     flex: 1;
@@ -189,7 +197,7 @@ main {
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 
-/* Page and Section Title Styling */
+/* Styles - Page Title */
 .page-title, h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif; /* Raleway font for titles for a modern look */
     text-align: center; /* Centers titles */
@@ -198,12 +206,12 @@ main {
     text-transform: uppercase;
 }
 
-/* Section Title Styling */
+/* Styles - Section Title */
 .section-title {
     margin-bottom: 0.6rem; /* Adds bottom margin for spacing between title and content */
 }
 
-/* Footer Styling */
+/* Styles - Footer */
 footer {
     justify-content: space-between; /* Space between items */
     text-align: left; /* Text align left for the button */
@@ -214,7 +222,6 @@ footer {
     padding: 1rem; /* Adds padding inside the footer */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     color: #fff; /* White text for contrast */
-    /* background-image: url('../img/footer_background.png'); Path to your footer background image */
     background-size: cover; /* Ensures the background image covers the footer area */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
@@ -237,7 +244,7 @@ footer {
     padding: 0; /* Add padding on both sides to ensure it doesn't touch the button or edge */
 }
 
-/* Accessibility menu styling */
+/* Styles - Accessibility Menu */
 #accessibility-menu {
     display: flex;
     align-items: center; /* Vertically centers accessibility items */
@@ -248,11 +255,11 @@ footer {
     width: auto;
     background: none;
     justify-self: start; /* Align the button to the left of its grid area */
-    border: 0.1rem solid #ffa500; /* Orange border for visibility */
-    color: #ffa500; /* Orange text for consistency */
+    border: 0.1rem solid #ff8800; /* Orange border for visibility */
+    color: #ff8800; /* Orange text for consistency */
     font-size: 0.7rem;
     padding: 0.5rem 1rem; /* Small horizontal padding */
-    border: 2px solid #ffa500;
+    border: 2px solid #ff8800;
     background-color: transparent;
     text-align: center;
     cursor: pointer; /* Indicates clickable item */
@@ -275,11 +282,11 @@ footer {
     cursor: pointer; /* Indicates clickable item */
 }
 
-/* Tooltip styling */
+/* Styles - Accessibility Tooltip */
 .tooltip {
     display: none; /* Hide tooltip by default */
     position: absolute; /* Position relative to its nearest positioned ancestor */
-    background-color: #333; /* Tooltip background color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     color: #fff; /* Text color */
     text-align: center;
     padding: 0.4rem 0.8rem; /* Padding around the text */
@@ -291,7 +298,7 @@ footer {
     z-index: 1; /* Ensure tooltip is above other content */
 }
 
-/* Tooltip arrow */
+/* Tooltip Arrow */
 .tooltip::after {
     content: "";
     position: absolute;
@@ -300,42 +307,42 @@ footer {
     margin-left: -0.4rem; /* Shift the arrow to the left to center it */
     border-width: 0.4rem; /* Arrow size */
     border-style: solid;
-    border-color: #333 transparent transparent transparent; /* Arrow color */
+    border-color: #ff8800 transparent transparent transparent; /* Arrow color */
 }
 
 
-/* Responsive design adjustments */
-@media (max-width: 973px) {
-    #main-nav {
-        display: none; /* Hides navigation links on smaller screens */
-    }
 
-    #hamburger-menu {
-        display: block; /* Shows hamburger menu on smaller screens */
-    }
-}
 
 /* ===HOME PAGE=== */
-/* About section */
+/* Styles - About & Contact Sections */
+.about, .contact {
+    max-width: 60rem; /* Sets a maximum width */
+    margin: 0 auto; /* Centers the section within its container */
+    padding: 1rem; /* Adds some padding around the text for readability */
+}
 
-/* Container for the contact section */
+/* Styles - Contact Section */
 .contact-section {
     display: flex;
     justify-content: flex-end; /* Aligns the form to the right */
     padding: 1.25rem; /* Adds some padding around the section for spacing */
     min-height: 25rem; /* Adjust height as needed */
+    flex-direction: column; /* Stacks the form vertically on smaller screens */
+    justify-content: center; /* Centers the form vertically */
+    align-items: center; /* Centers the form horizontally */
+
 }
 
-/* Styles for the form */
+/* Styles - Contact Form */
 #contact-form {
     max-width: 25rem; /* Sets a max width for the form */
     width: 100%; /* Ensures form does not exceed the max width */
     padding: 1.25rem; /* Adds padding inside the form for spacing */
-    border: 0.06rem solid #ffa500; /* Optional: adds a border around the form */
+    border: 0.06rem solid #ff8800; /* Optional: adds a border around the form */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
 }
 
-/* Styles for form elements */
+/* Styles - Contact Form Elements */
 #contact-form label {
     display: block; /* Makes each label display on its own line */
     margin-bottom: 0.3rem; /* Adds space below each label */
@@ -351,7 +358,7 @@ footer {
 }
 
 #contact-form button {
-    background-color: #ffa500; /* Sets the button color */
+    background-color: #ff8800; /* Sets the button color */
     color: black; /* Sets the text color inside the button */
     font-weight: bold;
     text-transform: uppercase;
@@ -364,15 +371,6 @@ footer {
 #contact-form button:hover {
     transform: scale(1.1); /* Enlarges the button by 10% on hover */
     transition: transform 0.2s ease-in-out; /* Smooth transition for the transform */
-}
-
-/* Responsive design */
-@media (max-width: 973px) {
-    .contact-section {
-        flex-direction: column; /* Stacks the form vertically on smaller screens */
-        justify-content: center; /* Centers the form vertically */
-        align-items: center; /* Centers the form horizontally */
-    }
 }
 
 /* ===TOOLS PAGE=== */
