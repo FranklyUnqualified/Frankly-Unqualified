@@ -412,6 +412,7 @@ footer {
     font-size: 1.5rem; /* Example font size, adjust as needed */
     font-weight: bold;
     margin-bottom: 0.5rem; /* Adds a little space below the tool name */
+    color: inherit; /* This makes sure the color is the same as the parent link */
 }
 
 /* Styles - Tool Summary */
@@ -419,12 +420,25 @@ footer {
     margin-bottom: 0.5rem; /* Adds a little space below the summary */
 }
 
-/* Styles - Tool/Learn More Link */
+/* Styles - Tool Link */
 .tool-link {
-    font-weight: bold;
-    color: #ff8800; /* Or any other color */
-    text-decoration: none; /* Removes underline */
-    align-self: center; /* Aligns the Learn More link in the center */
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Keeps the text color consistent with the rest of the content */
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
+}
+
+.tool-link:hover {
+    transform: scale(1.05); /* Slightly enlarges the link's content on hover */
+}
+
+/* Styles - Learn More */
+.learn-more {
+    color: #ffffff; 
+}
+
+.learn-more:hover {
+    color: #ff8800; /* Optionally, change the color on hover */
+    transform: scale(1.05); /* Slightly enlarges the link's content on hover */
 }
 
 /* Styles - Tool Image */
