@@ -361,6 +361,11 @@ footer {
     border-radius: 0.31rem; /* Rounds the corners of the button */
 }
 
+#contact-form button:hover {
+    transform: scale(1.1); /* Enlarges the button by 10% on hover */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for the transform */
+}
+
 /* Responsive design */
 @media (max-width: 973px) {
     .contact-section {
