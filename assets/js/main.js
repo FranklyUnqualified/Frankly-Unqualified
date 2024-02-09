@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdown = document.getElementById('dropdown-menu');
     let isDropdownOpen = false; // Track the state of the dropdown
     const accessibilityBtn = document.getElementById('accessibility-btn');
-    const tooltip = document.getElementById('accessibility-tooltip');
-
+    const tooltip = document.getElementById('accessibility-tooltip'); // Ensure this matches the tooltip's ID
 
     hamburgerMenu.addEventListener('click', function(event) {
         // Toggle the visibility of the dropdown menu
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation(); // Prevent the click from propagating
     });
 
-    // Adds an event listener to the document to close the dropdown when clicking outside
     document.addEventListener('click', function(event) {
         if (!dropdown.contains(event.target) && !hamburgerMenu.contains(event.target) && isDropdownOpen) {
             dropdown.classList.remove('show');
@@ -33,19 +31,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Prevents the dropdown menu from closing when clicking inside of it
     dropdown.addEventListener('click', function(event) {
         event.stopPropagation();
     });
 
-    // Accessibility button tooltip
+    // Show tooltip on button click
     accessibilityBtn.addEventListener('click', function() {
-        // Toggle tooltip visibility
-        if (tooltip.style.display === "none" || !tooltip.style.display) {
-            tooltip.style.display = "block";
-        } else {
+        tooltip.style.display = tooltip.style.display === "block" ? "none" : "block";
+    });
+
+    // Close tooltip when cursor leaves the tooltip
+    tooltip.addEventListener('mouseleave', function() {
+        tooltip.style.display = "none";
+    });
+
+    // Close tooltip when cursor leaves the accessibility button (and not moving towards the tooltip)
+    accessibilityBtn.addEventListener('mouseleave', function(event) {
+        if (!tooltip.contains(event.relatedTarget)) {
             tooltip.style.display = "none";
         }
     });
-
 });
