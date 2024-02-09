@@ -167,7 +167,7 @@ header {
 
 /* Styles - Website Logo */
 #logo img {
-    height: 6rem; /* Sets logo height, using rem for relative sizing */
+    height: 7rem; /* Sets logo height, using rem for relative sizing */
     width: auto; /* Keeps aspect ratio intact */
     margin-top: -0.5rem;
     margin-left: auto; /* Pushes logo to the right */
