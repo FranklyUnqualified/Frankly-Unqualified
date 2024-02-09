@@ -68,17 +68,6 @@ header {
     margin-right: 0.5rem; /* Space between icon and text */
 }
 
-/* Responsive Design - Navigation Menu */
-@media (max-width: 973px) {
-    #main-nav {
-        display: none; /* Hides navigation links on smaller screens */
-    }
-
-    #hamburger-menu {
-        display: block; /* Shows hamburger menu on smaller screens */
-    }
-}
-
 /* Styles - Hamburger Menu */
 #hamburger-menu {
     display: none; /* Initially hidden on larger screens */
@@ -163,6 +152,17 @@ header {
     height: 1.25rem; /* Decrease the size as needed */
     width: 1.25rem; /* Maintain aspect ratio */
     vertical-align: middle; /* Aligns the icon vertically with the text */
+}
+
+/* Responsive Design - Navigation Menu */
+@media (max-width: 973px) {
+    #main-nav {
+        display: none; /* Hides navigation links on smaller screens */
+    }
+
+    #hamburger-menu {
+        display: block; /* Shows hamburger menu on smaller screens */
+    }
 }
 
 /* Styles - Website Logo */
@@ -310,9 +310,6 @@ footer {
     border-color: #ff8800 transparent transparent transparent; /* Arrow color */
 }
 
-
-
-
 /* ===HOME PAGE=== */
 /* Styles - About & Contact Sections */
 .about, .contact {
@@ -373,23 +370,69 @@ footer {
     transition: transform 0.2s ease-in-out; /* Smooth transition for the transform */
 }
 
+/* Responsive Design - Contact Form */
+@media (max-width: 973px) {
+    .contact-section {
+        flex-direction: column; /* Stacks the form vertically on smaller screens */
+        justify-content: center; /* Centers the form vertically */
+        align-items: center; /* Centers the form horizontally */
+    }
+}
+
 /* ===TOOLS PAGE=== */
+/* Styles - Tools */
 .tools-list {
     display: flex;
     flex-direction: column;
 }
 
+/* Styles - Individual Tool */
 .tool {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem; /* Space between each tool */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Distributes space between text and image */
+    padding: 1rem; /* Adds padding for breathing space */
+    max-width: 60rem; /* Sets a maximum width */
+    margin: 0 auto; /* Centers the section within its container */
+    padding: 1rem; /* Adds some padding around the text for readability */
 }
 
+/* Styles - Tool Information */
 .tool-info {
     flex: 1;
+    padding: 0 1rem; /* Adds padding for a little more central alignment */
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items vertically */
+    align-items: flex-start; /* Aligns items to the start, making text aligned */
 }
 
-.tool-image img {
-    width: 12.5rem; /* Adjust as needed */
-    height: auto;
+/* Styles - Tool Name, to ensure alignment */
+.tool-name {
+    font-size: 1.5rem; /* Example font size, adjust as needed */
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Adds a little space below the tool name */
 }
+
+/* Styles - Tool Summary */
+.tool-summary {
+    margin-bottom: 0.5rem; /* Adds a little space below the summary */
+}
+
+/* Styles - Tool/Learn More Link */
+.tool-link {
+    font-weight: bold;
+    color: #ff8800; /* Or any other color */
+    text-decoration: none; /* Removes underline */
+    align-self: center; /* Aligns the Learn More link in the center */
+}
+
+/* Styles - Tool Image */
+.tool-image img {
+    width: auto; /* Adjust width as needed */
+    height: 4rem; /* Example height, adjust as needed */
+    object-fit: cover; /* Adjusts the fit of the image within its box */
+    margin-left: 2rem; /* Adds margin to the left of the image for centering */
+    align-self: center; /* Centers the image vertically */
+}
+
