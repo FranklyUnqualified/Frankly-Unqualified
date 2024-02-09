@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const dropdown = document.getElementById('dropdown-menu');
     let isDropdownOpen = false; // Track the state of the dropdown
+    const accessibilityBtn = document.getElementById('accessibility-btn');
+    const tooltip = document.getElementById('accessibility-tooltip');
+
 
     hamburgerMenu.addEventListener('click', function(event) {
         // Toggle the visibility of the dropdown menu
@@ -34,4 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
     dropdown.addEventListener('click', function(event) {
         event.stopPropagation();
     });
+
+    // Accessibility button tooltip
+    accessibilityBtn.addEventListener('click', function() {
+        // Toggle tooltip visibility
+        if (tooltip.style.display === "none" || !tooltip.style.display) {
+            tooltip.style.display = "block";
+        } else {
+            tooltip.style.display = "none";
+        }
+    });
+
 });

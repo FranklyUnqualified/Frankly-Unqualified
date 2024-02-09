@@ -274,6 +274,35 @@ footer {
     cursor: pointer; /* Indicates clickable item */
 }
 
+/* Tooltip styling */
+.tooltip {
+    display: none; /* Hide tooltip by default */
+    position: absolute; /* Position relative to its nearest positioned ancestor */
+    background-color: #333; /* Tooltip background color */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 0.4rem 0.8rem; /* Padding around the text */
+    border-radius: 0.4rem; /* Rounded corners */
+    font-size: 0.875rem; /* Tooltip text size */
+    bottom: 100%; /* Position above the button */
+    left: 50%; /* Start from the middle of the button */
+    transform: translateX(-50%); /* Center tooltip */
+    z-index: 1; /* Ensure tooltip is above other content */
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Bottom of the tooltip */
+    left: 50%; /* Center the arrow horizontally */
+    margin-left: -0.4rem; /* Shift the arrow to the left to center it */
+    border-width: 0.4rem; /* Arrow size */
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Arrow color */
+}
+
+
 /* Responsive design adjustments */
 @media (max-width: 973px) {
     #main-nav {
