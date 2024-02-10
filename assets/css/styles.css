@@ -450,3 +450,36 @@ footer {
     align-self: center; /* Centers the image vertically */
 }
 
+/* ===TOOL-OCEAN PAGE=== */
+.tool-description {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.download-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-download {
+    background-color: #ff8800;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.7rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #ff8800;
+}
+
+.tool-image img {
+    max-width: 100%;
+    display: block;
+    margin: 2rem auto;
+    width: auto; /* Sets icon size, using rem for scalability */
+    height: 20rem; /* Maintains aspect ratio */
+}
