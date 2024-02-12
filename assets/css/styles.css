@@ -427,19 +427,10 @@ footer {
     text-decoration: none; /* Removes underline from links */
     color: inherit; /* Keeps the text color consistent with the rest of the content */
     transition: transform 0.3s ease; /* Smooth transition for the transform */
+    font-weight: bold;
 }
 
 .tool-link:hover {
-    transform: scale(1.05); /* Slightly enlarges the link's content on hover */
-}
-
-/* Styles - Learn More */
-.learn-more {
-    color: #ffffff; 
-}
-
-.learn-more:hover {
-    color: #ff8800; /* Optionally, change the color on hover */
     transform: scale(1.05); /* Slightly enlarges the link's content on hover */
 }
 
@@ -465,17 +456,22 @@ footer {
 }
 
 .btn-download {
-    background-color: #ff8800;
-    color: #fff;
-    padding: 0.5rem 1rem;
+    display: inline-block;
+    background-color: #ffa500; /* Your button's background color */
+    color: #000; /* Your button's text color */
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 0.7rem;
-    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold; /* Bold text for emphasis */
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 0.5rem; /* Optional: if you want rounded corners */
 }
 
 .btn-download:hover {
-    background-color: #ff8800;
+    transform: scale(1.1); /* Enlarges the button slightly */
+    background-color: #ff8800; /* Optionally change the background color on hover */
 }
 
 .tool-ocean-image img {
