@@ -55,6 +55,7 @@ header {
     font-weight: bold; /* Bold text for emphasis */
     text-shadow: 0.2rem 0.2rem 0.3rem #000; /* Adds depth to text */
     transition: transform 0.3s ease; /* Smooth scaling transition on hover */
+    text-transform: uppercase;
 }
 
 #main-nav a.nav-link:hover {
@@ -66,12 +67,6 @@ header {
     height: 5rem; /* Icon size */
     width: auto; /* Maintains aspect ratio */
     margin-right: 0.5rem; /* Space between icon and text */
-    text-transform: uppercase;
-}
-
-/* Styles - Navigation Links */
-.nav-link {
-    text-transform: uppercase;
 }
 
 /* Styles - Hamburger Menu */
