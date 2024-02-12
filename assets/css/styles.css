@@ -66,6 +66,12 @@ header {
     height: 5rem; /* Icon size */
     width: auto; /* Maintains aspect ratio */
     margin-right: 0.5rem; /* Space between icon and text */
+    text-transform: uppercase;
+}
+
+/* Styles - Navigation Links */
+.nav-link {
+    text-transform: uppercase;
 }
 
 /* Styles - Hamburger Menu */
@@ -130,6 +136,7 @@ header {
     transform: translateX(0) translateY(0); /* Moves to final position */
     visibility: visible; /* Becomes fully visible */
     transition-delay: 0s; /* Ensure visibility transitions immediately */
+    text-transform: uppercase;
 }
 
 .dropdown-content a {
