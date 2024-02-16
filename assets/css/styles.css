@@ -318,7 +318,6 @@ footer {
     max-width: 60rem; /* Sets a maximum width */
     margin: 0 auto; /* Centers the section within its container */
     padding: 1rem; /* Adds some padding around the text for readability */
-    text-align: center; /* Centers the text horizontally within its container */
 }
 
 /* Styles - Contact Section */
@@ -485,50 +484,23 @@ footer {
 
 /* ===PROJECTS PAGE=== */
 
-.category-title {
-    font-size: 1.8rem; /* Slightly larger than project titles for distinction */
-    margin-left: 1rem; /* Adjust as needed for alignment */
-    font-weight: bold;
-}
-
 .project {
     margin: 1rem 0;
 }
 
 .project-title {
-    font-size: 1.5rem; /* Distinct size for project titles */
-    margin-bottom: 0.5rem; /* Space below the project title */
-    color: #ff8800; /* Example color for the link */
-    transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-.project-item {
-    display: flex;
-    justify-content: space-between; /* Separates text from the image */
-    align-items: center; /* Vertically aligns items in the flex container */
-    padding: 1rem; /* Adds padding for breathing space */
-    max-width: 60rem; /* Consistency with other page layouts */
-    margin: 0 auto; /* Centers the section within its container */
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .project-summary {
-    max-width: 40rem; /* Limits the width for better readability */
-    margin: 0 auto 2rem; /* Centers the summary text and adds space below */
-}
-
-.project-image {
-    max-width: 40rem; /* Adjust based on your design preference */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 0.5rem; /* Optional: adds rounded corners to the image */
-}
-
-.project-link, .project-image-link {
-    text-decoration: none; /* Removes underline from links */
+    margin: 1rem 0;
 }
 
 .project-link {
     display: inline-block;
     color: #ffa500; /* Or your theme's highlight color */
+    text-decoration: none;
     padding: 0.5rem 1rem;
     border: 0.12rem solid #ffa500; /* Or your theme's highlight color */
     border-radius: 0.5rem;
@@ -538,6 +510,4 @@ footer {
 .project-link:hover {
     background-color: #ffa500; /* Or your theme's highlight color */
     color: #000; /* Or contrast color */
-    transform: scale(1.05); /* Slightly enlarges the image on hover */
-    transition: transform 0.3s ease; /* Smooth transition for the transform */
 }
